@@ -54,7 +54,7 @@ header{
 .options-wrapper{
 	width: 40%;
 	margin-right: 10%;
-
+	justify-content: space-between;
 }
 .options-wrapper a{
 	text-align: right;
@@ -80,20 +80,23 @@ header{
 	height: 100%;
 	margin-left: 10%;
 	margin-right: 10%;
-	display: flex;
-	flex-direction: colum;
 	justify-content: space-between;
 	padding-top: 10vh;
 }
-.colum{
+
+.info-photo-app{
+	display: flex;
+	flex-direction: row;
 	margin-left: 10%;
-	width: 50%;
+	margin-right: 10%;
 }
+
 .title{
 	font-size: 3.5rem;
 	font-weight: bold;
 	text-align: justify;
 	color: #000;
+	width: 80%;
 }
 
 .description p{
@@ -101,13 +104,23 @@ header{
 	padding-top: 5vh;
 	text-align: justify;
 	color: #000;
+	width: 80%;
 }
 
 .get-app{
+	display: flex;
+	flex-direction: column;
+
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.app-stores{
 	padding-top: 5vh;
 	display: flex;
+	width: 50%;
 	justify-content: space-between;
-	align-items: left; 
+	margin-left: 2%;
 }
 
 .app-download{
@@ -115,8 +128,6 @@ header{
 	width: 13rem;
 	border-radius: 1rem;
 	background-size: cover;
-	margin-right: 10%;
-	margin-left: 10%;
 }
 .app-download:nth-child(1){
 	background-image: url("../img/apple-store.png");
@@ -132,9 +143,15 @@ header{
 
 .rate-app{
 	padding-top: 2vh;
+	width: 50%;
+	justify-content: space-between;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+.star:nth-child(2){
+	margin-left: 15%;
 }
 
 .checked {
@@ -142,10 +159,88 @@ header{
 }
 
 .phone-app{
+
 	background-image: url("../img/image.png");
 	background-repeat: no-repeat;
   	background-size: 100% 100%;
-	width: 19vw;
-	height: 65vh;
-	margin-right: 10%;
+	width: 50vw;
+	height: 50vh;
+	
+}
+
+/* Media Queries*/
+
+@media (min-width: 2048px){
+	*{
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 1280px){
+
+	header{
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.logo-name{
+		width: 40%;
+		margin-left: 0;
+		padding-bottom: 5vh;
+	}
+	.options-wrapper{
+		width: 70%;
+		margin-right: 0;
+	}
+	.title{
+		text-align: left;
+	}	
+
+	.app-download:nth-child(2){
+		margin-left: 5%;
+	}
+}
+
+@media (max-width: 1024px){
+	.info-photo-app{
+		flex-direction: column;
+		align-items: center;
+	}
+	.title{
+		width: 100%;
+	}
+
+	.description p{
+		width: 100%;
+	}
+	.get-app{
+		align-items: center;
+	}
+	.phone-app{
+		height: 60vh;
+	}
+}
+
+@media (max-width: 768px){
+	.app-stores{
+		width: 70%;
+	}
+	.rate-app{
+		width: 70%;
+	}
+
+}
+
+@media (max-width: 480px){
+	
+	.description p{
+		color: #E5E5E5;
+	}
+	.app-stores{
+		width: 100%;
+	}
+	.rate-app{
+		width: 100%;
+	}
+
 }
